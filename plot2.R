@@ -1,4 +1,4 @@
-## This script is used to plot and save <plot1.png>
+## This script is used to plot and save <plot2.png>
 ###################################################
 
 # Check the current working folder
@@ -21,16 +21,18 @@ source("loadOnlyNecessaryDataFromDataset.R")
 dev.new(); myGraphDev <- dev.cur() 
 # if one wants, this device can be closed later with dev.off()
 
-# plot 1 (histogram)
-hist(housePCDFlimited$Global_active_power, 
-     col="red", 
-     xlab="Global Active Power (kilowatts)", 
-     ylab="Frequency", 
-     main="Global Active Power"
+# plot 2
+with(housePCDFlimited,
+     plot(Global_active_power ~ combinedDateTime, 
+          type="l",
+          col="black", 
+          xlab="", 
+          ylab="Global Active Power (kilowatts)"
+          )
      )
 
 # copy the plot to a PNG file
-dev.copy(png, file = "plot1.png", width = 480, height = 480)
+dev.copy(png, file = "plot2.png", width = 480, height = 480)
 # close the PNG device!
 dev.off()
 
