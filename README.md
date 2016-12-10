@@ -11,13 +11,13 @@ see full description of the variables and the assignment at the following
 
 **downloadAndUnzipDataset.R**
 This script is used to download and unzip the file containing the dataset. Both the archive and the unziped data are stored in the **./data** folder.
-This script is called from <plot1.R>, <plot2.R>, <plot3.R>, <plot4.R>
+This script is called from **plot1.R**, **plot2.R**, **plot3.R**, **plot4.R**
 
 **loadOnlyNecessaryDataFromDataset.R**
 This script is used to load only necessary points from huge dataset file stored in the **./data** folder. 
 The resultant data set contains the data for the following required dates:
 1/2/2007 and 2/2/2007 (format dd/mm/yyyy)
-This script is called from <plot1.R>, <plot2.R>, <plot3.R>, <plot4.R>
+This script is called from **plot1.R**, **plot2.R**, **plot3.R**, **plot4.R**
 
 **plot1.R**
 The script to make <plot1.png> 
